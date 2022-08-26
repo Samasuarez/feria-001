@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+body {
+  margin: 0;
+  background-color: rgb(253, 238, 238);
+  font-family: "Roboto";
+}
+
+.bgColor {
+  background: lightcoral;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1.5s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 1.5s;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+  animation-duration: 2s;
+}
+.parrafoContacto{
+  /* background-color: bisque; */
+  width: 300px;
+  /* padding: 20px 40px 40px 40px; */
+  margin: 0;
+}
+.tituloContacto {
+  text-align: center;
+  /* background-color: bisque; */
+  margin: 0;
+  width: 300px;
+  /* padding: 40px 40px 0 40px ; */
+  /* padding: 40px; */
+  padding-bottom: 20px;
+}
+li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  display: flex;
+}
+.formContacto{
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  padding: 40px;
+}
+.formContacto input{
+/* margin: 10px 40px; */
+}
+.gridUContacto{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "textoContacto textoContacto"
+    "footer footer";
+}
+.gridUbicacion{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "imgPrincipalUbicacion imgPrincipalUbicacion"
+    "textoUbicacion textoUbicacion"
+    "imgUbicacion1 imgUbicacion2"
+    "mapaUbicacion mapaUbicacion"
+    "footer footer";
+}
+header{
+  grid-area: header;
+}
+.imgPrincipalUbicacion{
+  grid-area: imgPrincipalUbicacion;
+}
+.textoUbicacion{
+  grid-area: textoUbicacion;
+  padding: 40px;
+}
+.imgUbicacion1{
+  grid-area: imgUbicacion1;
+  
+}
+.imgUbicacion2{
+  grid-area: imgUbicacion2;
+
+}
+.mapaUbicacion{
+  grid-area: mapaUbicacion;
+} 
+footer{
+  grid-area: footer;
+}
+.gridIndex{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "encabezado encabezado"
+    "textoUbicacion1 textoUbicacion1"
+    "imgPrincipalUbi imgPrincipalUbi"
+    "textoUbicacion2 textoUbicacion2"
+    "footer footer";
+}
+.imgPrincipalUbi {
+  grid-area: imgPrincipalUbi;
+  background-image: url("../img/fashion.jpg");
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  color: white;
+}
+
+.imgPrincipal {
+  grid-area: imgPrincipal;
+}
+.encabezado {
+  grid-area: encabezado;
+  text-align: center;
+}
+.texto {
+  grid-area: texto;
+  display: flex;
+  align-items: center;
+}
+.textoContacto {
+  height: 100vh;
+  grid-area: textoContacto;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/fashion.jpg");
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+.texto p,
+.texto2 p {
+  padding: 20px 15px;
+  margin: 0;
+}
+
+.texto2 {
+  grid-area: texto2;
+  display: flex;
+  align-items: center;
+}
+
+.textoUbicacion1 {
+  grid-area: textoUbicacion1;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  padding: 0 100px;
+}
+
+.textoUbicacion2 {
+  grid-area: textoUbicacion2;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  padding: 0 100px;
+}
+.mapaUbicacion {
+  grid-area: mapaUbicacion;
+  width: 100%;
+}
+
+.img {
+  grid-area: img;
+  height: 450px;
+  overflow: hidden;
+}
+.img2 {
+  grid-area: img2;
+  height: 450px;
+  overflow: hidden;
+}
+.img2 img,
+.img img {
+  height: 100%;
+  object-fit: cover;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(128, 72, 81);
+  color: white;
+}
+.imgPrincipal img,
+.img,
+img,
+.imgPrincipalUbi,
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.imgAnimation {
+  transform: scale(1);
+  transition: 4s;
+}
+
+.imgAnimation:hover {
+  transform: scale(1.2);
+  transition: 4s;
+}
+
+nav {
+  width: 100%;
+  background-color: rgb(128, 72, 81);
+}
+.gridServicio2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "encabezado encabezado"
+    "img texto"
+    "texto2 img2"
+    "footer footer";
+}
+.gridProducto {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+header {
+  display: flex;
+  grid-area: header;
+}
+
+header a {
+  color: white;
+  font-size: 20px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  display: grid;
+  grid-template-areas:
+    "encabP encabP encabP"
+    "imgP imgC imgR"
+    "cardIzq cardCen cardDer"
+    "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+}
+.encabP {
+  grid-area: encabP;
+  text-align: center;
+}
+.cardIzq {
+  grid-area: cardIzq;
+  padding: 0 40px;
+}
+.cardCen {
+  grid-area: cardCen;
+  padding: 0 40px;
+}
+.cardDer {
+  grid-area: cardDer;
+  padding: 0 40px;
+}
+.imgP,
+.imgC,
+.imgR {
+  grid-area: imgP;
+  display: flex;
+  height: 400px;
+  /* padding: 50px; */
+}
+.imgC {
+  grid-area: imgC;
+}
+.imgR {
+  grid-area: imgR;
+}
+
+.bgImgContacto {
+  height: 100%;
+  background-image: url("../img/fashion.jpg");
+}
+
+@media only screen and (max-width: 1020px) {
+  main {
+    grid-area: main;
+    display: flex;
+    display: grid;
+    grid-template-areas:
+      "encabP encabP encabP"
+      "imgP imgP imgP"
+      "cardIzq cardIzq cardIzq"
+      "imgC imgC imgC"
+      "cardCen cardCen cardCen"
+      "imgR imgR imgR"
+      "cardDer cardDer cardDer"
+      "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .imgR,
+  .imgP,
+  .imgC {
+    height: 200px;
+  }
+  .textoContacto {
+    grid-area: textoContacto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .imgPrincipalContacto {
+    grid-area: imgPrincipal;
+    height: 100%;
+  }
+  .bgImgContacto {
+    height: 100%;
+    background-image: url("../img/fashion.jpg");
+  }
+
+  .textoUbicacion{
+   height: aut;
+  }
+  .imgUbicacion{
+    height: 200px
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  header ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  header li {
+    margin: 0;
+  }
+  header li:hover {
+    background-color: white;
+  }
+  header li:hover a {
+    color: rgb(128, 72, 81);
+  }
+  footer {
+    text-align: center;
+  }
+  .gridServicio2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header header"
+      "encabezado encabezado"
+      "img img"
+      "texto texto"
+      "img2 img2"
+      "texto2 texto2"
+      "footer footer";
+  }
+
+  .texto,
+  .texto2,
+  .textoContacto {
+    height: 100%;
+  }
+  .img,
+  .img2, {
+    height: 300px;
+  }
+
+  .textoUbicacion1 {
+    grid-area: textoUbicacion1;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    height: 100%;
+  }
+
+  .textoUbicacion2 {
+    grid-area: textoUbicacion2;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 520px){
+  .gridUbicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header header"
+      "imgPrincipalUbicacion imgPrincipalUbicacion"
+      "textoUbicacion textoUbicacion"
+      "imgUbicacion1 imgUbicacion1"
+      "imgUbicacion2 imgUbicacion2"
+      "mapaUbicacion mapaUbicacion"
+      "footer footer";
+}
+
+}
